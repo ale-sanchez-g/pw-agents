@@ -1,0 +1,28 @@
+{
+  "name": "pw-agents",
+  "version": "1.0.0",
+  "description": "This repository showcase the multiple ai agents using playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:performance": "playwright test tests/devops1-performance-and-technical-validation.spec.ts",
+    "test:responsive": "playwright test tests/devops1-responsive-design-and-cross-device.spec.ts",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "ai-agents"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^24.7.0"
+  }
+}

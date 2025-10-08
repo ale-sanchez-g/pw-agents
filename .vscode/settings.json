@@ -1,0 +1,24 @@
+{
+  "playwright.showTrace": true,
+  "playwright.reuseBrowser": true,
+  "playwright.showBrowser": true,
+  "playwright.highlightLine": true,
+  "playwright.timeout": 30000,
+  "playwright.updateSnapshots": "none",
+  "playwright.workers": 1,
+  "playwright.debug": false,
+  "playwright.trace": "on-first-retry",
+  "playwright.video": "retain-on-failure",
+  "playwright.screenshot": "only-on-failure",
+  "extensions.ignoreRecommendations": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "npm.packageManager": "npm",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "files.associations": {
+    "*.spec.ts": "typescript",
+    "*.test.ts": "typescript"
+  }
+}
