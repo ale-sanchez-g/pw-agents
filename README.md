@@ -287,6 +287,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Documentation
 
 - [Getting Started Guide](GETTING_STARTED.md) - Step-by-step tutorial for new users
+- [Architecture Overview](ARCHITECTURE.md) - Technical architecture and design patterns
 - [Contributing Guide](CONTRIBUTING.md) - Guidelines for contributing to the project
 - [Changelog](CHANGELOG.md) - Version history and release notes
 
