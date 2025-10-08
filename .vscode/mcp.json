@@ -8,6 +8,10 @@
         "run-test-mcp-server"
       ],
       "cwd": "${workspaceFolder}"
+    },
+    "lighthouse": {
+      "command": "npx",
+      "args": ["lighthouse-mcp"]
     }
   },
   "inputs": []

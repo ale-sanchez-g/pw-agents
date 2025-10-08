@@ -1,6 +1,6 @@
 # Playwright Agents
 
-This repository demonstrates Playwright Agents - AI-powered tools for automated web testing. Playwright comes with three agents out of the box: 🎭 planner, 🎭 generator, and 🎭 healer.
+This repository demonstrates Playwright Agents - AI-powered tools for automated web testing. Playwright comes with three core agents out of the box: 🎭 planner, 🎭 generator, and 🎭 healer, plus a specialized **🎭 accessibility-auditor** for comprehensive WCAG 2.2 compliance testing.
 
 ## Introduction
 
@@ -9,6 +9,7 @@ Playwright Agents can be used independently, sequentially, or as chained calls i
 - **🎭 planner** explores the app and produces a Markdown test plan
 - **🎭 generator** transforms the Markdown plan into Playwright Test files  
 - **🎭 healer** executes the test suite and automatically repairs failing tests
+- **🎭 accessibility-auditor** performs comprehensive WCAG 2.2 accessibility testing using Playwright and Lighthouse MCPs
 
 ## ✅ Current Status
 
@@ -124,6 +125,34 @@ When tests fail, the healer agent:
 **Output:**
 - A passing test, or a skipped test if the healer believes the functionality is broken
 
+### 🎭 Accessibility Auditor ✨ NEW
+
+The accessibility auditor agent performs comprehensive WCAG 2.2 compliance testing using both Playwright for detailed DOM analysis and Lighthouse for automated accessibility scoring.
+
+**Key Features:**
+- **WCAG 2.2 Compliance**: Tests latest accessibility guidelines including mobile and cognitive considerations
+- **Automated + Manual Testing**: Combines Lighthouse audits with Playwright-driven manual testing
+- **Comprehensive Coverage**: Keyboard navigation, screen reader simulation, color contrast, touch targets
+- **Detailed Reporting**: Executive summaries, compliance matrices, and actionable remediation guides
+
+**Input:**
+- Target URL or application to audit
+- Specific features or user flows to focus on
+- WCAG conformance level requirements (AA recommended)
+
+**Output:**
+- Comprehensive accessibility audit report
+- WCAG 2.2 compliance matrix with pass/fail status
+- Prioritized remediation recommendations with code examples
+- Automated regression tests for accessibility fixes
+
+**Usage Example:**
+```
+"I need a comprehensive accessibility audit of our checkout process at https://shop.example.com/checkout following WCAG 2.2 guidelines"
+```
+
+**📖 Detailed Documentation**: See [Accessibility Auditor Agent Guide](docs/accessibility-auditor-agent.md) for complete usage instructions and methodology.
+
 ## Artifacts and Conventions
 
 The static agent definitions and generated files follow a simple, auditable structure:
@@ -158,9 +187,11 @@ Seed tests provide a ready-to-use `page` context to bootstrap execution. The pla
 ## Additional Resources
 
 - **[Playwright Test Agents Documentation](https://playwright.dev/docs/test-agents)**: Official documentation
+- **[Accessibility Auditor Agent Guide](docs/accessibility-auditor-agent.md)**: Complete WCAG 2.2 testing methodology and usage
 - **[Playwright MCP Setup](docs/playwright-mcp-setup.md)**: Complete setup guide and troubleshooting  
 - **[Chatmode Configuration](docs/chatmode-configuration.md)**: Tool mapping and configuration details
 - **[VS Code Insiders](https://code.visualstudio.com/insiders/)**: Required for full agentic experience
+- **[Sample Accessibility Test](tests/accessibility-audit-sample.spec.ts)**: Example WCAG 2.2 test implementation
 
 ## Troubleshooting
 
