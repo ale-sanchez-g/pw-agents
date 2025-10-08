@@ -1,0 +1,30 @@
+{
+  "name": "pw-agents",
+  "version": "1.0.0",
+  "description": "This repository showcase the multiple ai agents using playwright",
+  "main": "agents/index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:accessibility": "node examples/accessibility-example.js",
+    "test:api": "node examples/api-example.js",
+    "test:performance": "node examples/performance-example.js",
+    "test:examples": "npm run test:accessibility && npm run test:api && npm run test:performance"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "accessibility",
+    "api-testing",
+    "performance-testing",
+    "agents",
+    "automation"
+  ],
+  "author": "Alejandro (AJ)",
+  "license": "MIT",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.56.0",
+    "lighthouse": "^12.8.2",
+    "swagger-parser": "^10.0.3"
+  }
+}
