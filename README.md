@@ -43,6 +43,8 @@ npm install
 npx playwright install chromium
 ```
 
+**New to pw-agents?** Check out the [Getting Started Guide](GETTING_STARTED.md) for a step-by-step tutorial.
+
 ## Usage
 
 ### Quick Start

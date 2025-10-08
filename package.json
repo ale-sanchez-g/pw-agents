@@ -8,6 +8,7 @@
     "test:accessibility": "node examples/accessibility-example.js",
     "test:api": "node examples/api-example.js",
     "test:performance": "node examples/performance-example.js",
+    "test:integration": "node examples/integration-example.js",
     "test:examples": "npm run test:accessibility && npm run test:api && npm run test:performance"
   },
   "keywords": [
