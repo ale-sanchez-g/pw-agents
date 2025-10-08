@@ -284,6 +284,51 @@ MIT License - see LICENSE file for details
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Documentation
+
+- [Getting Started Guide](GETTING_STARTED.md) - Step-by-step tutorial for new users
+- [Contributing Guide](CONTRIBUTING.md) - Guidelines for contributing to the project
+- [Changelog](CHANGELOG.md) - Version history and release notes
+
+## Validation
+
+Before running tests, you can validate that all agents are properly installed and structured:
+
+```bash
+npm run validate
+```
+
+This will check:
+- All required methods are implemented
+- Agent options are properly configured
+- Utility methods work correctly
+
+## Project Structure
+
+```
+pw-agents/
+├── agents/                      # Agent implementations
+│   ├── accessibility-agent.js   # Accessibility testing agent
+│   ├── api-agent.js            # API testing agent
+│   ├── performance-agent.js    # Performance testing agent
+│   └── index.js                # Main export file
+├── examples/                    # Example usage scripts
+│   ├── data/                   # Sample data files
+│   │   └── sample-api.json     # Sample OpenAPI specification
+│   ├── accessibility-example.js
+│   ├── api-example.js
+│   ├── performance-example.js
+│   ├── integration-example.js  # Combined example
+│   └── validate-agents.js      # Validation script
+├── tests/                      # Playwright tests
+├── playwright.config.js        # Playwright configuration
+└── package.json               # Project configuration
+```
+
 ## Support
 
-For issues and questions, please open an issue on GitHub.
+For issues and questions:
+- 📖 Check the [Getting Started Guide](GETTING_STARTED.md)
+- 🐛 Open an issue on GitHub
+- 💬 Start a discussion
+- 📝 Review the examples in the `examples/` directory

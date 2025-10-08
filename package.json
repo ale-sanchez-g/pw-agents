@@ -9,7 +9,8 @@
     "test:api": "node examples/api-example.js",
     "test:performance": "node examples/performance-example.js",
     "test:integration": "node examples/integration-example.js",
-    "test:examples": "npm run test:accessibility && npm run test:api && npm run test:performance"
+    "test:examples": "npm run test:accessibility && npm run test:api && npm run test:performance",
+    "validate": "node examples/validate-agents.js"
   },
   "keywords": [
     "playwright",
