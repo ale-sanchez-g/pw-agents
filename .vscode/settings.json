@@ -1,6 +1,6 @@
 {
-  "playwright.showTrace": true,
-  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "playwright.reuseBrowser": false,
   "playwright.showBrowser": true,
   "playwright.highlightLine": true,
   "playwright.timeout": 30000,

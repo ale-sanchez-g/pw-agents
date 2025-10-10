@@ -179,6 +179,7 @@ Generate detailed accessibility reports including:
 - **Test Evidence**: Screenshots and code snippets demonstrating issues
 - **Remediation Guide**: Step-by-step fix instructions
 - **Regression Test Plan**: Automated tests to prevent future accessibility regressions
+- **Lighthouse Automated Test Plan**: Automated Lighthouse test scripts for continuous monitoring
 
 <example>Context: User needs accessibility testing for their e-commerce website checkout flow. user: 'I need a comprehensive accessibility audit of our checkout process at https://shop.example.com/checkout following WCAG 2.2 guidelines' assistant: 'I'll use the accessibility auditor agent to perform a thorough WCAG 2.2 compliance audit of your checkout flow using both Lighthouse and Playwright testing.' <commentary> This requires comprehensive accessibility testing combining automated Lighthouse audits with detailed manual Playwright testing, exactly what the accessibility auditor agent is designed for. </commentary></example>
 

@@ -11,6 +11,15 @@ Playwright Agents can be used independently, sequentially, or as chained calls i
 - **🎭 healer** executes the test suite and automatically repairs failing tests
 - **🎭 accessibility-auditor** performs comprehensive WCAG 2.2 accessibility testing using Playwright and Lighthouse MCPs
 
+## System Requirements
+
+- **Node.js**: 16.x or higher
+- **VS Code**: v1.105+ (available in Insiders channel)
+- **Dependencies**:
+  - Playwright Test for VS Code extension
+  - Lighthouse (v12.8+)
+  - Chrome, Firefox, and Webkit browsers (installed via Playwright)
+
 ## ✅ Current Status
 
 - **VS Code Configuration**: Complete with optimal Playwright settings (requires VS Code v1.105+)
@@ -84,6 +93,24 @@ This project includes VS Code configuration for optimal Playwright development:
 - **Settings**: Configured in `.vscode/settings.json` with Playwright-specific settings
 - **Extensions**: Recommended extensions in `.vscode/extensions.json` including the Playwright extension
 - **Debug**: Debug configurations in `.vscode/launch.json` for debugging Playwright tests
+- **MCP Configuration**: Model Context Protocol setup in `.vscode/mcp.json` for agent functionality
+
+### Setting up VS Code for Playwright Agents
+
+1. **Install VS Code**: Ensure you're using VS Code v1.105+ (available in [VS Code Insiders channel](https://code.visualstudio.com/insiders/))
+
+2. **Install Required Extensions**:
+   - [Playwright Test for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)
+   - [TypeScript and JavaScript Language Features](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
+   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+3. **Configure Settings**:
+   - VS Code will automatically use the optimal settings from `.vscode/settings.json`
+   - These settings configure Playwright for debugging, screenshots, traces, and more
+
+4. **Import Launch Configurations**:
+   - Launch configurations are automatically loaded from `.vscode/launch.json`
+   - Use these for debugging Playwright tests directly from VS Code
 
 ## Playwright Agents
 
@@ -135,6 +162,11 @@ The accessibility auditor agent performs comprehensive WCAG 2.2 compliance testi
 - **Comprehensive Coverage**: Keyboard navigation, screen reader simulation, color contrast, touch targets
 - **Detailed Reporting**: Executive summaries, compliance matrices, and actionable remediation guides
 
+**Requirements:**
+- Lighthouse v12.8+ (included in devDependencies)
+- Chrome browser (primary browser for accessibility testing)
+- Node.js 16+ with npm
+
 **Input:**
 - Target URL or application to audit
 - Specific features or user flows to focus on
@@ -184,12 +216,33 @@ Generated Playwright tests, aligned one-to-one with specs wherever feasible.
 
 Seed tests provide a ready-to-use `page` context to bootstrap execution. The planner will run this test to execute all the initialization necessary for your test including the global setup, project dependencies and all the necessary fixtures and hooks.
 
+## Model Context Protocol (MCP) Configuration
+
+This project uses Model Context Protocols (MCPs) to power the AI agents. The MCP configuration is defined in `.vscode/mcp.json` and includes:
+
+- **Playwright Test MCP**: Enables interaction with Playwright's testing capabilities
+- **Lighthouse MCP**: Provides accessibility testing capabilities
+
+### MCP Server Setup
+
+1. **Verify MCP Configuration**:
+   - Ensure `.vscode/mcp.json` is properly configured with server definitions
+   - The configuration connects the agents to Playwright and Lighthouse functionality
+
+2. **Required MCP Servers**:
+   - Playwright Test MCP Server: Enabled via `npx playwright run-test-mcp-server`
+   - Lighthouse MCP Server: Enabled via `npx lighthouse-mcp`
+
+3. **Agent Chatmodes**:
+   - Agent definitions are stored in `.github/chatmodes/`
+   - Each agent has its own chatmode file (e.g., `🎭 planner.chatmode.md`)
+   - These define the agent's capabilities and tool interactions
+
 ## Additional Resources
 
 - **[Playwright Test Agents Documentation](https://playwright.dev/docs/test-agents)**: Official documentation
 - **[Accessibility Auditor Agent Guide](docs/accessibility-auditor-agent.md)**: Complete WCAG 2.2 testing methodology and usage
-- **[Playwright MCP Setup](docs/playwright-mcp-setup.md)**: Complete setup guide and troubleshooting  
-- **[Chatmode Configuration](docs/chatmode-configuration.md)**: Tool mapping and configuration details
+- **[VS Code Insiders](https://code.visualstudio.com/insiders/)**: Required for full agentic experience
 - **[VS Code Insiders](https://code.visualstudio.com/insiders/)**: Required for full agentic experience
 - **[Sample Accessibility Test](tests/accessibility-audit-sample.spec.ts)**: Example WCAG 2.2 test implementation
 
@@ -199,3 +252,6 @@ Seed tests provide a ready-to-use `page` context to bootstrap execution. The pla
 - **Agent Initialization**: Re-run `npx playwright init-agents --loop=vscode` if agents aren't working
 - **Tool References**: If you encounter issues with tool references, see the [setup documentation](docs/playwright-mcp-setup.md)
 - **Browser Installation**: Run `npx playwright install` if browser automation fails
+- **Lighthouse Integration**: Make sure Lighthouse is properly installed with `npm install -D lighthouse@latest`
+- **Accessibility Testing**: If accessibility tests fail, check browser compatibility and ensure proper DOM access
+- **Performance Issues**: For slow tests, consider running with the `--workers=1` flag to prevent resource contention
