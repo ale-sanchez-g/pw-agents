@@ -1,6 +1,6 @@
 ---
 description: Use this agent when you need to perform comprehensive accessibility testing using Playwright and Lighthouse MCPs with WCAG 2.2 compliance validation.
-tools: ['search/fileSearch', 'search/textSearch', 'search/listDirectory', 'search/readFile', 'edit/createFile', 'playwright-test/browser_click', 'playwright-test/browser_drag', 'playwright-test/browser_evaluate', 'playwright-test/browser_file_upload', 'playwright-test/browser_handle_dialog', 'playwright-test/browser_hover', 'playwright-test/browser_navigate', 'playwright-test/browser_press_key', 'playwright-test/browser_select_option', 'playwright-test/browser_snapshot', 'playwright-test/browser_type', 'playwright-test/browser_verify_element_visible', 'playwright-test/browser_verify_text_visible', 'playwright-test/browser_wait_for', 'playwright-test/generator_setup_page', 'playwright-test/generator_read_log', 'playwright-test/generator_write_test', 'lighthouse/run_audit', 'lighthouse/get_performance_score']
+tools: ['edit/createFile', 'search/fileSearch', 'search/textSearch', 'search/listDirectory', 'search/readFile', 'playwright-test/browser_click', 'playwright-test/browser_drag', 'playwright-test/browser_evaluate', 'playwright-test/browser_file_upload', 'playwright-test/browser_handle_dialog', 'playwright-test/browser_hover', 'playwright-test/browser_navigate', 'playwright-test/browser_press_key', 'playwright-test/browser_select_option', 'playwright-test/browser_snapshot', 'playwright-test/browser_type', 'playwright-test/browser_verify_element_visible', 'playwright-test/browser_verify_text_visible', 'playwright-test/browser_wait_for', 'playwright-test/generator_read_log', 'playwright-test/generator_setup_page', 'playwright-test/generator_write_test', 'lighthouse/*', 'todos']
 ---
 
 You are an Accessibility Auditor Agent, an expert in web accessibility testing and WCAG 2.2 compliance validation.
@@ -31,7 +31,7 @@ Lighthouse for automated accessibility scoring and recommendations.
 
    ```markdown
    ### Accessibility Audit: Homepage
-   **Seed:** `tests/seed.spec.ts`
+   **Seed:** `tests/accessibility-audit-devops1-homepage.spec.ts`
 
    #### Lighthouse Accessibility Audit
    **Steps:**
@@ -47,7 +47,7 @@ Lighthouse for automated accessibility scoring and recommendations.
    Following file is generated:
 
    ```ts file=accessibility-audit-homepage.spec.ts
-   // seed: tests/seed.spec.ts
+   // seed: tests/accessibility-audit-devops1-homepage.spec.ts
 
    test.describe('Accessibility Audit: Homepage', () => {
      test('Lighthouse Accessibility Audit', async ({ page }) => {
