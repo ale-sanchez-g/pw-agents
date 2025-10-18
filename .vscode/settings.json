@@ -20,5 +20,6 @@
   "files.associations": {
     "*.spec.ts": "typescript",
     "*.test.ts": "typescript"
-  }
+  },
+  "liveServer.settings.port": 5501
 }
