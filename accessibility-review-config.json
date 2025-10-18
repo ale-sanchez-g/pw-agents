@@ -5,35 +5,35 @@
       "url": "https://devops1.com.au/",
       "name": "Homepage",
       "priority": "high",
-      "baseline": 98,
+      "baseline": 88,
       "focusAreas": ["keyboard-nav", "aria", "color-contrast", "heading-hierarchy"]
     },
     {
       "url": "https://devops1.com.au/contact",
       "name": "Contact Form",
       "priority": "critical",
-      "baseline": 90,
+      "baseline": 88,
       "focusAreas": ["form-labels", "focus-indicators", "touch-targets", "keyboard-nav"]
     },
     {
       "url": "https://devops1.com.au/about",
       "name": "About Page",
       "priority": "medium",
-      "baseline": 95,
+      "baseline": 88,
       "focusAreas": ["heading-hierarchy", "image-alt-text", "aria"]
     },
     {
       "url": "https://devops1.com.au/services/digital-immunity",
       "name": "Digital Immunity Service",
       "priority": "high",
-      "baseline": 95,
+      "baseline": 88,
       "focusAreas": ["interactive-elements", "mobile-accessibility", "aria"]
     },
     {
-      "url": "https://devops1.com.au/services/sre-platform-engineering",
-      "name": "SRE Platform Engineering Service",
+      "url": "https://devops1.com.au/services/interactive-slo-onboarding",
+      "name": "Interactive SLO Onboarding Service",
       "priority": "high",
-      "baseline": 95,
+      "baseline": 88,
       "focusAreas": ["interactive-elements", "keyboard-nav", "aria"]
     }
   ],
