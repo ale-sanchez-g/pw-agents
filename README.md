@@ -207,7 +207,7 @@ open reports/accessibility/index.html
 
 **CI Integration:**
 The agent runs automatically in GitHub Actions:
-- **Scheduled**: Daily at 2 AM UTC
+- **Scheduled**: Monthly on the 19th at 2 AM UTC
 - **PR Trigger**: When source files change
 - **Manual**: Via GitHub Actions UI
 
