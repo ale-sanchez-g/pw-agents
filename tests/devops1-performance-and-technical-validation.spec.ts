@@ -70,7 +70,7 @@ test.describe('Performance and Technical Validation', () => {
     
     // Debug: log the critical errors for analysis if test fails
     if (criticalErrors.length >= 3) {
-      console.log('Critical errors found:', criticalErrors);
+      test.info().log('Critical errors found: ' + JSON.stringify(criticalErrors));
     }
     
     expect(criticalErrors.length).toBeLessThan(3);
