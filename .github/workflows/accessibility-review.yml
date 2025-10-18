@@ -2,7 +2,7 @@ name: Continuous Accessibility Review
 
 on:
   schedule:
-    # Run 19th of the months at 2 AM UTC
+    # Run on the 19th of each month at 2 AM UTC
     - cron: '0 2 19 * *'
   workflow_dispatch: # Allow manual triggers
     inputs:
