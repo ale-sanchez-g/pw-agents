@@ -47,7 +47,7 @@ class AccessibilityReviewAgent {
           this.results.push(result);
 
           // Detect regressions
-          const previousScore = baseline[page.url]?.score || page.baseline;
+          const previousScore = baseline[page.url]?.score ?? page.baseline;
           const delta = result.score - previousScore;
           
           if (delta < -this.config.regressionThreshold) {
