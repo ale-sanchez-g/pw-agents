@@ -152,7 +152,7 @@ When tests fail, the healer agent:
 **Output:**
 - A passing test, or a skipped test if the healer believes the functionality is broken
 
-### 🎭 Accessibility Auditor ✨ NEW
+### 🎭 Accessibility Auditor ✨
 
 The accessibility auditor agent performs comprehensive WCAG 2.2 compliance testing using both Playwright for detailed DOM analysis and Lighthouse for automated accessibility scoring.
 
@@ -184,6 +184,34 @@ The accessibility auditor agent performs comprehensive WCAG 2.2 compliance testi
 ```
 
 **📖 Detailed Documentation**: See [Accessibility Auditor Agent Guide](docs/accessibility-auditor-agent.md) for complete usage instructions and methodology.
+
+### 🎭 CI Accessibility Monitor ✨ NEW
+
+An **outer loop agent** that continuously monitors your website for accessibility compliance in CI/CD pipelines. Built following [GitHub's agentic primitives](https://github.blog/ai-and-ml/github-copilot/how-to-build-reliable-ai-workflows-with-agentic-primitives-and-context-engineering/), this agent detects regressions and maintains accessibility standards over time.
+
+**Key Features:**
+- **Continuous Monitoring**: Scheduled daily reviews + PR checks
+- **Regression Detection**: Compare scores against baseline with configurable thresholds
+- **Smart Notifications**: GitHub Issues + Slack alerts for critical issues
+- **Trend Analysis**: Track accessibility improvements over time
+- **PR Blocking**: Fail CI if critical regressions detected
+
+**Quick Start:**
+```bash
+# Run accessibility review
+npm run accessibility-review
+
+# View reports
+open reports/accessibility/index.html
+```
+
+**CI Integration:**
+The agent runs automatically in GitHub Actions:
+- **Scheduled**: Monthly on the 19th at 2 AM UTC
+- **PR Trigger**: When source files change
+- **Manual**: Via GitHub Actions UI
+
+**📖 Complete Guide**: See [CI Accessibility Agent Documentation](docs/ci-accessibility-agent.md) for setup, configuration, and best practices.
 
 ## Artifacts and Conventions
 

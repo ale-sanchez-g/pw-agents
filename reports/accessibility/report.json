@@ -1,0 +1,226 @@
+{
+  "timestamp": "2025-10-18T11:24:36.211Z",
+  "summary": {
+    "totalPages": 5,
+    "regressions": 0,
+    "errors": 0,
+    "averageScore": "88.00"
+  },
+  "results": [
+    {
+      "name": "Homepage",
+      "url": "https://devops1.com.au/",
+      "priority": "high",
+      "score": 88,
+      "manualTests": {
+        "keyboardNav": {
+          "passed": true,
+          "details": "Focus moved to A element",
+          "focusedElement": {
+            "tag": "A",
+            "type": "N/A",
+            "id": "N/A",
+            "role": "N/A"
+          }
+        },
+        "aria": {
+          "passed": false,
+          "landmarks": {
+            "nav": 1,
+            "main": 0,
+            "banner": 1,
+            "contentinfo": 1,
+            "complementary": 0
+          },
+          "issues": [
+            "Missing main landmark"
+          ]
+        },
+        "colorContrast": {
+          "passed": true,
+          "note": "Color contrast requires axe-core or Lighthouse detailed checks",
+          "recommendation": "Use Lighthouse accessibility audit for contrast analysis"
+        },
+        "headingHierarchy": {
+          "passed": false,
+          "headingCount": 27,
+          "issues": [
+            "Skipped heading level: H1 to H4",
+            "Skipped heading level: H1 to H4",
+            "Skipped heading level: H1 to H4",
+            "Skipped heading level: H2 to H5",
+            "Skipped heading level: H3 to H5",
+            "Skipped heading level: H2 to H4",
+            "Skipped heading level: H2 to H5",
+            "Skipped heading level: H2 to H5"
+          ]
+        }
+      },
+      "timestamp": "2025-10-18T11:24:21.528Z"
+    },
+    {
+      "name": "Contact Form",
+      "url": "https://devops1.com.au/contact",
+      "priority": "critical",
+      "score": 88,
+      "manualTests": {
+        "formLabels": {
+          "passed": false,
+          "totalInputs": 7,
+          "issues": [
+            "Input #1 (INPUT) missing label",
+            "Input #2 (INPUT) missing label",
+            "Input #3 (INPUT) missing label",
+            "Input #4 (INPUT) missing label",
+            "Input #5 (INPUT) missing label",
+            "Input #6 (TEXTAREA) missing label",
+            "Input #7 (TEXTAREA) missing label"
+          ]
+        },
+        "focusIndicators": {
+          "passed": false,
+          "checkedCount": 10,
+          "issues": [
+            "Element 1 has no visible focus indicator",
+            "Element 2 has no visible focus indicator",
+            "Element 3 has no visible focus indicator",
+            "Element 4 has no visible focus indicator",
+            "Element 5 has no visible focus indicator",
+            "Element 6 has no visible focus indicator",
+            "Element 7 has no visible focus indicator",
+            "Element 8 has no visible focus indicator",
+            "Element 9 has no visible focus indicator",
+            "Element 10 has no visible focus indicator"
+          ]
+        },
+        "touchTargets": {
+          "passed": true,
+          "checkedCount": 5,
+          "issues": []
+        },
+        "keyboardNav": {
+          "passed": true,
+          "details": "Focus moved to A element",
+          "focusedElement": {
+            "tag": "A",
+            "type": "N/A",
+            "id": "N/A",
+            "role": "button"
+          }
+        }
+      },
+      "timestamp": "2025-10-18T11:24:24.696Z"
+    },
+    {
+      "name": "About Page",
+      "url": "https://devops1.com.au/about",
+      "priority": "medium",
+      "score": 88,
+      "manualTests": {
+        "headingHierarchy": {
+          "passed": false,
+          "headingCount": 37,
+          "issues": [
+            "Skipped heading level: H2 to H4",
+            "Skipped heading level: H2 to H4",
+            "Skipped heading level: H2 to H5",
+            "Skipped heading level: H2 to H4",
+            "Skipped heading level: H2 to H5"
+          ]
+        },
+        "imageAltText": {
+          "passed": true,
+          "totalImages": 25,
+          "issues": []
+        },
+        "aria": {
+          "passed": false,
+          "landmarks": {
+            "nav": 1,
+            "main": 0,
+            "banner": 1,
+            "contentinfo": 1,
+            "complementary": 0
+          },
+          "issues": [
+            "Missing main landmark"
+          ]
+        }
+      },
+      "timestamp": "2025-10-18T11:24:33.835Z"
+    },
+    {
+      "name": "Digital Immunity Service",
+      "url": "https://devops1.com.au/services/digital-immunity",
+      "priority": "high",
+      "score": 88,
+      "manualTests": {
+        "interactiveElements": {
+          "passed": true,
+          "interactiveCount": 43,
+          "issues": []
+        },
+        "mobileAccessibility": {
+          "passed": true,
+          "hasViewport": true,
+          "viewportContent": "width=device-width, initial-scale=1, shrink-to-fit=no",
+          "hasUserScalable": true,
+          "issues": []
+        },
+        "aria": {
+          "passed": false,
+          "landmarks": {
+            "nav": 1,
+            "main": 0,
+            "banner": 1,
+            "contentinfo": 1,
+            "complementary": 0
+          },
+          "issues": [
+            "Missing main landmark"
+          ]
+        }
+      },
+      "timestamp": "2025-10-18T11:24:34.965Z"
+    },
+    {
+      "name": "Interactive SLO Onboarding Service",
+      "url": "https://devops1.com.au/services/interactive-slo-onboarding",
+      "priority": "high",
+      "score": 88,
+      "manualTests": {
+        "interactiveElements": {
+          "passed": true,
+          "interactiveCount": 45,
+          "issues": []
+        },
+        "keyboardNav": {
+          "passed": true,
+          "details": "Focus moved to A element",
+          "focusedElement": {
+            "tag": "A",
+            "type": "N/A",
+            "id": "N/A",
+            "role": "N/A"
+          }
+        },
+        "aria": {
+          "passed": false,
+          "landmarks": {
+            "nav": 1,
+            "main": 0,
+            "banner": 1,
+            "contentinfo": 1,
+            "complementary": 0
+          },
+          "issues": [
+            "Missing main landmark"
+          ]
+        }
+      },
+      "timestamp": "2025-10-18T11:24:36.189Z"
+    }
+  ],
+  "regressions": [],
+  "errors": []
+}

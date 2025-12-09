@@ -11,7 +11,8 @@
     "test:debug": "playwright test --debug",
     "test:ui": "playwright test --ui",
     "report": "playwright show-report",
-    "codegen": "playwright codegen"
+    "codegen": "playwright codegen",
+    "accessibility-review": "node scripts/run-accessibility-review.js"
   },
   "keywords": [
     "playwright",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "@types/node": "^24.7.0",
-    "lighthouse": "^12.8.2"
+    "lighthouse": "^12.8.2",
+    "node-fetch": "^3.3.2"
   }
 }

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Review Report - 10/18/2025</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', Arial, sans-serif;
+      max-width: 1400px; 
+      margin: 0 auto; 
+      padding: 40px 20px;
+      background: #f6f8fa;
+      color: #24292f;
+    }
+    h1 { color: #0969da; margin-bottom: 10px; font-size: 2.5em; }
+    h2 { color: #24292f; margin: 30px 0 15px; border-bottom: 2px solid #d0d7de; padding-bottom: 8px; }
+    h3 { color: #24292f; margin: 20px 0 10px; }
+    .meta { color: #57606a; margin-bottom: 30px; }
+    .summary { 
+      background: white; 
+      padding: 30px; 
+      border-radius: 8px; 
+      margin: 20px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .summary-item { text-align: center; }
+    .summary-item .value { 
+      font-size: 3em; 
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .summary-item .label { 
+      color: #57606a;
+      font-size: 0.9em;
+    }
+    .regression { 
+      background: #fff8c5; 
+      border-left: 4px solid #d29922; 
+      padding: 20px; 
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .error-item {
+      background: #ffebe9;
+      border-left: 4px solid #cf222e;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .page-result { 
+      background: white;
+      border: 1px solid #d0d7de; 
+      border-radius: 8px; 
+      padding: 25px; 
+      margin: 20px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .score { 
+      font-size: 3em; 
+      font-weight: bold;
+      line-height: 1;
+    }
+    .pass { color: #1a7f37; }
+    .warn { color: #d29922; }
+    .fail { color: #cf222e; }
+    .priority {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      font-weight: 600;
+    }
+    .priority-critical { background: #ffebe9; color: #cf222e; }
+    .priority-high { background: #fff8c5; color: #d29922; }
+    .priority-medium { background: #ddf4ff; color: #0969da; }
+    .priority-low { background: #f6f8fa; color: #57606a; }
+    .url { 
+      color: #0969da; 
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .url:hover { text-decoration: underline; }
+    details { 
+      margin: 15px 0;
+      background: #f6f8fa;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    summary { 
+      cursor: pointer; 
+      font-weight: 600;
+      color: #0969da;
+      padding: 5px 0;
+    }
+    summary:hover { text-decoration: underline; }
+    pre { 
+      background: #24292f;
+      color: #f6f8fa;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 10px 0;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    .test-result {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      margin: 5px 0;
+      background: #f6f8fa;
+      border-radius: 4px;
+    }
+    .test-result .icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+    .test-result .name {
+      font-weight: 500;
+      flex: 1;
+    }
+    .issues-list {
+      list-style: none;
+      padding-left: 20px;
+    }
+    .issues-list li {
+      padding: 5px 0;
+      color: #cf222e;
+    }
+    .issues-list li:before {
+      content: "⚠️ ";
+      margin-right: 8px;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #d0d7de;
+      text-align: center;
+      color: #57606a;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎭 Accessibility Review Report</h1>
+  <p class="meta">Generated: 10/18/2025, 10:24:36 PM | Run by: Outer Loop Agent</p>
+  
+  <div class="summary">
+    <div class="summary-item">
+      <span class="value pass">5</span>
+      <span class="label">Pages Reviewed</span>
+    </div>
+    <div class="summary-item">
+      <span class="value pass">0</span>
+      <span class="label">Regressions</span>
+    </div>
+    <div class="summary-item">
+      <span class="value pass">0</span>
+      <span class="label">Errors</span>
+    </div>
+    <div class="summary-item">
+      <span class="value warn">88.0</span>
+      <span class="label">Average Score</span>
+    </div>
+  </div>
+
+  <h2 style="color: #1a7f37;">✅ No Regressions Detected</h2>
+
+  
+
+  <h2>📊 Page Results</h2>
+  
+    <div class="page-result">
+      <div class="page-header">
+        <div>
+          <h3 style="margin: 0;">Homepage</h3>
+          <span class="priority priority-high">HIGH</span>
+        </div>
+        <div class="score warn">
+          88/100
+        </div>
+      </div>
+      <p><a href="https://devops1.com.au/" class="url" target="_blank">https://devops1.com.au/</a></p>
+      
+      
+        <div style="margin: 20px 0;">
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">keyboard Nav</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">aria</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Missing main landmark</li>
+                
+              </ul>
+            
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">color Contrast</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">heading Hierarchy</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Skipped heading level: H1 to H4</li><li>Skipped heading level: H1 to H4</li><li>Skipped heading level: H1 to H4</li><li>Skipped heading level: H2 to H5</li><li>Skipped heading level: H3 to H5</li>
+                <li>...and 3 more</li>
+              </ul>
+            
+          
+        </div>
+        
+        <details>
+          <summary>View Detailed Test Results (JSON)</summary>
+          <pre>{
+  "keyboardNav": {
+    "passed": true,
+    "details": "Focus moved to A element",
+    "focusedElement": {
+      "tag": "A",
+      "type": "N/A",
+      "id": "N/A",
+      "role": "N/A"
+    }
+  },
+  "aria": {
+    "passed": false,
+    "landmarks": {
+      "nav": 1,
+      "main": 0,
+      "banner": 1,
+      "contentinfo": 1,
+      "complementary": 0
+    },
+    "issues": [
+      "Missing main landmark"
+    ]
+  },
+  "colorContrast": {
+    "passed": true,
+    "note": "Color contrast requires axe-core or Lighthouse detailed checks",
+    "recommendation": "Use Lighthouse accessibility audit for contrast analysis"
+  },
+  "headingHierarchy": {
+    "passed": false,
+    "headingCount": 27,
+    "issues": [
+      "Skipped heading level: H1 to H4",
+      "Skipped heading level: H1 to H4",
+      "Skipped heading level: H1 to H4",
+      "Skipped heading level: H2 to H5",
+      "Skipped heading level: H3 to H5",
+      "Skipped heading level: H2 to H4",
+      "Skipped heading level: H2 to H5",
+      "Skipped heading level: H2 to H5"
+    ]
+  }
+}</pre>
+        </details>
+      
+      
+      <p style="margin-top: 15px; color: #57606a; font-size: 0.9em;">
+        Reviewed: 10/18/2025, 10:24:21 PM
+      </p>
+    </div>
+  
+    <div class="page-result">
+      <div class="page-header">
+        <div>
+          <h3 style="margin: 0;">Contact Form</h3>
+          <span class="priority priority-critical">CRITICAL</span>
+        </div>
+        <div class="score warn">
+          88/100
+        </div>
+      </div>
+      <p><a href="https://devops1.com.au/contact" class="url" target="_blank">https://devops1.com.au/contact</a></p>
+      
+      
+        <div style="margin: 20px 0;">
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">form Labels</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Input #1 (INPUT) missing label</li><li>Input #2 (INPUT) missing label</li><li>Input #3 (INPUT) missing label</li><li>Input #4 (INPUT) missing label</li><li>Input #5 (INPUT) missing label</li>
+                <li>...and 2 more</li>
+              </ul>
+            
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">focus Indicators</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Element 1 has no visible focus indicator</li><li>Element 2 has no visible focus indicator</li><li>Element 3 has no visible focus indicator</li><li>Element 4 has no visible focus indicator</li><li>Element 5 has no visible focus indicator</li>
+                <li>...and 5 more</li>
+              </ul>
+            
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">touch Targets</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">keyboard Nav</span>
+            </div>
+            
+          
+        </div>
+        
+        <details>
+          <summary>View Detailed Test Results (JSON)</summary>
+          <pre>{
+  "formLabels": {
+    "passed": false,
+    "totalInputs": 7,
+    "issues": [
+      "Input #1 (INPUT) missing label",
+      "Input #2 (INPUT) missing label",
+      "Input #3 (INPUT) missing label",
+      "Input #4 (INPUT) missing label",
+      "Input #5 (INPUT) missing label",
+      "Input #6 (TEXTAREA) missing label",
+      "Input #7 (TEXTAREA) missing label"
+    ]
+  },
+  "focusIndicators": {
+    "passed": false,
+    "checkedCount": 10,
+    "issues": [
+      "Element 1 has no visible focus indicator",
+      "Element 2 has no visible focus indicator",
+      "Element 3 has no visible focus indicator",
+      "Element 4 has no visible focus indicator",
+      "Element 5 has no visible focus indicator",
+      "Element 6 has no visible focus indicator",
+      "Element 7 has no visible focus indicator",
+      "Element 8 has no visible focus indicator",
+      "Element 9 has no visible focus indicator",
+      "Element 10 has no visible focus indicator"
+    ]
+  },
+  "touchTargets": {
+    "passed": true,
+    "checkedCount": 5,
+    "issues": []
+  },
+  "keyboardNav": {
+    "passed": true,
+    "details": "Focus moved to A element",
+    "focusedElement": {
+      "tag": "A",
+      "type": "N/A",
+      "id": "N/A",
+      "role": "button"
+    }
+  }
+}</pre>
+        </details>
+      
+      
+      <p style="margin-top: 15px; color: #57606a; font-size: 0.9em;">
+        Reviewed: 10/18/2025, 10:24:24 PM
+      </p>
+    </div>
+  
+    <div class="page-result">
+      <div class="page-header">
+        <div>
+          <h3 style="margin: 0;">About Page</h3>
+          <span class="priority priority-medium">MEDIUM</span>
+        </div>
+        <div class="score warn">
+          88/100
+        </div>
+      </div>
+      <p><a href="https://devops1.com.au/about" class="url" target="_blank">https://devops1.com.au/about</a></p>
+      
+      
+        <div style="margin: 20px 0;">
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">heading Hierarchy</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Skipped heading level: H2 to H4</li><li>Skipped heading level: H2 to H4</li><li>Skipped heading level: H2 to H5</li><li>Skipped heading level: H2 to H4</li><li>Skipped heading level: H2 to H5</li>
+                
+              </ul>
+            
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">image Alt Text</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">aria</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Missing main landmark</li>
+                
+              </ul>
+            
+          
+        </div>
+        
+        <details>
+          <summary>View Detailed Test Results (JSON)</summary>
+          <pre>{
+  "headingHierarchy": {
+    "passed": false,
+    "headingCount": 37,
+    "issues": [
+      "Skipped heading level: H2 to H4",
+      "Skipped heading level: H2 to H4",
+      "Skipped heading level: H2 to H5",
+      "Skipped heading level: H2 to H4",
+      "Skipped heading level: H2 to H5"
+    ]
+  },
+  "imageAltText": {
+    "passed": true,
+    "totalImages": 25,
+    "issues": []
+  },
+  "aria": {
+    "passed": false,
+    "landmarks": {
+      "nav": 1,
+      "main": 0,
+      "banner": 1,
+      "contentinfo": 1,
+      "complementary": 0
+    },
+    "issues": [
+      "Missing main landmark"
+    ]
+  }
+}</pre>
+        </details>
+      
+      
+      <p style="margin-top: 15px; color: #57606a; font-size: 0.9em;">
+        Reviewed: 10/18/2025, 10:24:33 PM
+      </p>
+    </div>
+  
+    <div class="page-result">
+      <div class="page-header">
+        <div>
+          <h3 style="margin: 0;">Digital Immunity Service</h3>
+          <span class="priority priority-high">HIGH</span>
+        </div>
+        <div class="score warn">
+          88/100
+        </div>
+      </div>
+      <p><a href="https://devops1.com.au/services/digital-immunity" class="url" target="_blank">https://devops1.com.au/services/digital-immunity</a></p>
+      
+      
+        <div style="margin: 20px 0;">
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">interactive Elements</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">mobile Accessibility</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">aria</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Missing main landmark</li>
+                
+              </ul>
+            
+          
+        </div>
+        
+        <details>
+          <summary>View Detailed Test Results (JSON)</summary>
+          <pre>{
+  "interactiveElements": {
+    "passed": true,
+    "interactiveCount": 43,
+    "issues": []
+  },
+  "mobileAccessibility": {
+    "passed": true,
+    "hasViewport": true,
+    "viewportContent": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "hasUserScalable": true,
+    "issues": []
+  },
+  "aria": {
+    "passed": false,
+    "landmarks": {
+      "nav": 1,
+      "main": 0,
+      "banner": 1,
+      "contentinfo": 1,
+      "complementary": 0
+    },
+    "issues": [
+      "Missing main landmark"
+    ]
+  }
+}</pre>
+        </details>
+      
+      
+      <p style="margin-top: 15px; color: #57606a; font-size: 0.9em;">
+        Reviewed: 10/18/2025, 10:24:34 PM
+      </p>
+    </div>
+  
+    <div class="page-result">
+      <div class="page-header">
+        <div>
+          <h3 style="margin: 0;">Interactive SLO Onboarding Service</h3>
+          <span class="priority priority-high">HIGH</span>
+        </div>
+        <div class="score warn">
+          88/100
+        </div>
+      </div>
+      <p><a href="https://devops1.com.au/services/interactive-slo-onboarding" class="url" target="_blank">https://devops1.com.au/services/interactive-slo-onboarding</a></p>
+      
+      
+        <div style="margin: 20px 0;">
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">interactive Elements</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">✅</span>
+              <span class="name">keyboard Nav</span>
+            </div>
+            
+          
+            <div class="test-result">
+              <span class="icon">❌</span>
+              <span class="name">aria</span>
+            </div>
+            
+              <ul class="issues-list">
+                <li>Missing main landmark</li>
+                
+              </ul>
+            
+          
+        </div>
+        
+        <details>
+          <summary>View Detailed Test Results (JSON)</summary>
+          <pre>{
+  "interactiveElements": {
+    "passed": true,
+    "interactiveCount": 45,
+    "issues": []
+  },
+  "keyboardNav": {
+    "passed": true,
+    "details": "Focus moved to A element",
+    "focusedElement": {
+      "tag": "A",
+      "type": "N/A",
+      "id": "N/A",
+      "role": "N/A"
+    }
+  },
+  "aria": {
+    "passed": false,
+    "landmarks": {
+      "nav": 1,
+      "main": 0,
+      "banner": 1,
+      "contentinfo": 1,
+      "complementary": 0
+    },
+    "issues": [
+      "Missing main landmark"
+    ]
+  }
+}</pre>
+        </details>
+      
+      
+      <p style="margin-top: 15px; color: #57606a; font-size: 0.9em;">
+        Reviewed: 10/18/2025, 10:24:36 PM
+      </p>
+    </div>
+  
+
+  <footer>
+    <p>Generated by 🎭 CI Accessibility Monitor Agent</p>
+    <p>Based on WCAG 2.2 Level AA Guidelines</p>
+  </footer>
+</body>
+</html>

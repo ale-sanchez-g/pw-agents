@@ -1,0 +1,52 @@
+{
+  "reviewSchedule": "daily",
+  "targetPages": [
+    {
+      "url": "https://devops1.com.au/",
+      "name": "Homepage",
+      "priority": "high",
+      "baseline": 88,
+      "focusAreas": ["keyboard-nav", "aria", "color-contrast", "heading-hierarchy"]
+    },
+    {
+      "url": "https://devops1.com.au/contact",
+      "name": "Contact Form",
+      "priority": "critical",
+      "baseline": 88,
+      "focusAreas": ["form-labels", "focus-indicators", "touch-targets", "keyboard-nav"]
+    },
+    {
+      "url": "https://devops1.com.au/about",
+      "name": "About Page",
+      "priority": "medium",
+      "baseline": 88,
+      "focusAreas": ["heading-hierarchy", "image-alt-text", "aria"]
+    },
+    {
+      "url": "https://devops1.com.au/services/digital-immunity",
+      "name": "Digital Immunity Service",
+      "priority": "high",
+      "baseline": 88,
+      "focusAreas": ["interactive-elements", "mobile-accessibility", "aria"]
+    },
+    {
+      "url": "https://devops1.com.au/services/interactive-slo-onboarding",
+      "name": "Interactive SLO Onboarding Service",
+      "priority": "high",
+      "baseline": 88,
+      "focusAreas": ["interactive-elements", "keyboard-nav", "aria"]
+    }
+  ],
+  "wcagLevel": "AA",
+  "wcag22Criteria": true,
+  "notificationChannels": {
+    "githubIssues": true,
+    "slackWebhook": "${SLACK_WEBHOOK_URL}",
+    "email": "team@devops1.com.au"
+  },
+  "reportOutputPath": "reports/accessibility",
+  "baselineComparison": true,
+  "regressionThreshold": 5,
+  "timeoutMs": 30000,
+  "retryAttempts": 2
+}
